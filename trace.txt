@@ -1,0 +1,53 @@
+execve("./main", ["./main"], 0x7fff81871c10 /* 89 vars */) = 0
+brk(NULL)                               = 0x3a65b000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=188663, ...}) = 0
+mmap(NULL, 188663, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f23302e0000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libSDL3.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2747216, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f23302de000
+mmap(NULL, 2776504, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2330000000
+mmap(0x7f2330015000, 1986560, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7f2330015000
+mmap(0x7f23301fa000, 577536, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fa000) = 0x7f23301fa000
+mmap(0x7f2330287000, 102400, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x286000) = 0x7f2330287000
+mmap(0x7f23302a0000, 23992, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f23302a0000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000x\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 896, 64) = 896
+fstat(3, {st_mode=S_IFREG|0755, st_size=2149728, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 896, 64) = 896
+mmap(NULL, 2174000, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f232fc00000
+mmap(0x7f232fc24000, 1515520, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7f232fc24000
+mmap(0x7f232fd96000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x196000) = 0x7f232fd96000
+mmap(0x7f232fe05000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x204000) = 0x7f232fe05000
+mmap(0x7f232fe0b000, 31792, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f232fe0b000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1100400, ...}) = 0
+mmap(NULL, 1102152, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f232fef2000
+mmap(0x7f232ff01000, 569344, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7f232ff01000
+mmap(0x7f232ff8c000, 466944, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x7f232ff8c000
+mmap(0x7f232fffe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10b000) = 0x7f232fffe000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f23302db000
+arch_prctl(ARCH_SET_FS, 0x7f23302db740) = 0
+set_tid_address(0x7f23302dba10)         = 13634
+set_robust_list(0x7f23302dba20, 24)     = 0
+rseq(0x7f23302db680, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f232fe05000, 16384, PROT_READ) = 0
+mprotect(0x7f232fffe000, 4096, PROT_READ) = 0
+mprotect(0x7f2330287000, 53248, PROT_READ) = 0
+mprotect(0x403000, 4096, PROT_READ)     = 0
+mprotect(0x7f2330350000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\xac\x72\x12\xf2\xa5\xf0\x8f\xd1", 8, GRND_NONBLOCK) = 8
+munmap(0x7f23302e0000, 188663)          = 0
+brk(NULL)                               = 0x3a65b000
+brk(0x3a67c000)                         = 0x3a67c000
+--- SIGSEGV {si_signo=SIGSEGV, si_code=SI_KERNEL, si_addr=NULL} ---
++++ killed by SIGSEGV (core dumped) +++
