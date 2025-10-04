@@ -1,5 +1,8 @@
 # main.s
 
+
+
+
     .extern glfwInit
     .extern glClearColor
     .extern glGetUniformLocation
