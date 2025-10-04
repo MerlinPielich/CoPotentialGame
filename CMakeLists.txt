@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
+<<<<<<< HEAD
 project(GLFW-CMake-Starter C ASM)  
 
 # make sure NASM exists 
@@ -57,3 +58,55 @@ target_link_libraries(main
 
 # Export compile commands for clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+=======
+project(rts C ASM)
+
+# Enable assembling .s (GAS/AT&T) sources
+enable_language(ASM)
+
+# Prefer explicit no-PIE linking to match non-PIE assembly if needed
+# If you want PIE, remove this line.
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -no-pie")
+
+# Find dependencies
+find_package(glfw3 REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(Threads REQUIRED)
+
+# Collect assembly (.s) sources automatically (expects files like main.s, input.s, movement.s, timing_loop.s)
+file(GLOB ASM_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.s")
+
+# Add any C source(s) you have (e.g. glew wrapper)
+set(C_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/glew_wrapper.c
+)
+
+# Final source list
+set(SOURCES ${ASM_SOURCES} ${C_SOURCES})
+
+# Create executable
+add_executable(main ${SOURCES})
+
+# Set C standard
+set_property(TARGET main PROPERTY C_STANDARD 11)
+set_property(TARGET main PROPERTY C_STANDARD_REQUIRED ON)
+
+# Link libraries
+target_link_libraries(main
+    PRIVATE
+      glfw
+      OpenGL::GL
+      GLEW::GLEW
+      Threads::Threads
+      dl
+      m
+)
+
+# Export compile commands for tools like clangd
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Helpful messages
+message(STATUS "ASM sources: ${ASM_SOURCES}")
+message(STATUS "Building executable: main")
+>>>>>>> 9f59466 ( new syntax, new me)
