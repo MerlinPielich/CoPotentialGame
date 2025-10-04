@@ -1,2 +1,0 @@
--I/usr/include/GLFW  
--I/usr/include/GL   
