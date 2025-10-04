@@ -192,6 +192,7 @@ main:
     call printf
     jmp .cleanup
 
+
 .set_hints:
     ; Force client API = OpenGL
     mov edi, 0x00022001      ; GLFW_CLIENT_API
