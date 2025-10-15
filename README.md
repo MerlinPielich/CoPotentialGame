@@ -1,39 +1,37 @@
-# CoPotentialGame
-Merlin the best math tu delft student & Michael the best Data Science tu delft student
+## Assembly game
 
-## Dependencies
-* GLFW (cross-platform window + input handling)
-* OpenGL (graphics API)
-* GLEW (extension loader for OpenGL)
-* NASM (assembler for the .asm files)
+### Project description
+We will be implementing the game together:
 
-### **Linux (Ubuntu/Debian):**
-```bash
-  sudo apt install cmake build-essential nasm libglfw3-dev libglew-dev libglu1-mesa-dev mesa-common-dev
-```
-#### Linux (Arch):
-``` bash
-sudo pacman -S cmake base-devel nasm glfw-x11 glew mesa
-```
-#### macOS (Homebrew):
-```bash
-brew install cmake nasm glfw glew
-```
-#### Windows:
-* Install CMake
-* and NASM
-Use vcpkg:
-```bash
-vcpkg install glfw3 glew
-```
+Merlin Pielich 4847490
 
-## Build Instructions
+Michael Hempel  6531695
 
-From the source directory run:
-```bash
-cmake -S . -B build
-cmake --build build
-./build/main
-```
+Os to use: Home made.
+
+libraries:
+* GLFW
+* glew
+* OpenGL
+* C standard library
+
+Rendering will be done directly by passing variables to openGL (using glew). 
+Can be seen in the game description
 
 
+### Game description
+* The game is rendered in 2D
+* The player is a cute little orb/ball/thing
+* The player controls this object with WASD
+* The player will interact with the game, solely by using the keyboard
+* There are objects bouncing around
+* There is a clock in the top right corner that shows the player how much time, since the beginning of the game, has passed.
+* Whenever the player character collides with one of the bouncing objects, the game ends
+* Optional: After x amount of time, the number of bouncing objects increases
+* When the game ends
+* The scores will be stored in a file
+* The players score will be shown in relation to the other scores
+* player 1, 2, 3, 4… etc.
+* The player can then restart the game
+* The player will be scored based on the time they managed to survive
+* Sprites will be used to distinguish between player, background and bouncing balls (or whatever they may be)
